@@ -335,7 +335,7 @@
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/demo/demo.js"></script>
 
-<script src="http://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+<script src="assets/js/jquery.table2excel.min.js"></script>
 <script>
  
 function expRpt(tainingId){

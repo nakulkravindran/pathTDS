@@ -317,7 +317,7 @@ response.setDateHeader("Expire",0); //prevents caching at the proxy server
 <script src="assets/demo/demo.js"></script>
 <script src="js/Examview.js"></script>
  <script src="js/exmidcheck.js"></script>
- <script src="http://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+ <script src="assets/js/jquery.table2excel.min.js"></script>
  <script>
     $("#export").click(function(){
       $("#applicantTable").table2excel({

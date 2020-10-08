@@ -218,7 +218,7 @@ response.setDateHeader("Expire",0); //prevents caching at the proxy server
                 <script src="assets/js/now-ui-dashboard.js?v=1.0.1"></script>
                 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
                 <script src="assets/demo/demo.js"></script>
-                <script src="http://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+                <script src="assets/js/jquery.table2excel.min.js"></script>
                  <script>
                  $( document ).ready(function() {
                 	 $("#errDt").text('');
