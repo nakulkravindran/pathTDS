@@ -125,7 +125,7 @@ public class TrainingController {
 				+ trainingdao.findById(Long.parseLong(traRegM.getTrainingid())).getStartdt()
 				+ "</b>. Please fill up the training evaluation sheet and submit the same maximum by tomorrow. You can access the training evaluation sheet via the below link:";
 		mailStr = mailStr
-				+ "<br/>				<a href='https://academy.path-solutions.com/pathTDS/TrainingEvaluation?traId="
+				+ "<br/>				<a href='https://academy.path-solutions.com:9095/pathTDS/TrainingEvaluation?traId="
 				+ traingid + "&traRegId=" + traRegM.getId() + "'>(Evaluation Link)</a>";
 		mailStr = mailStr
 				+ "<br/>	Please submit the evaluation  on time. Your evaluation will help the trainer and Corporate Academy to improve further. ";
@@ -215,7 +215,7 @@ public class TrainingController {
 								+ trainingdao.findById(Long.parseLong(traRegM.getTrainingid())).getStartdt()
 								+ "</b>. Please fill up the training evaluation sheet and submit the same maximum by tomorrow. You can access the training evaluation sheet via the below link:";
 						mailStr = mailStr
-								+ "<br/>				<a href='https://academy.path-solutions.com/pathTDS/TrainingEvaluation?traId="
+								+ "<br/>				<a href='https://academy.path-solutions.com:9095/pathTDS/TrainingEvaluation?traId="
 								+ traingid + "&traRegId=" + traRegM.getId() + "'>(Evaluation Link)</a>";
 						mailStr = mailStr
 								+ "<br/>	Please submit the evaluation  on time. Your evaluation will help the trainer and Corporate Academy to improve further. ";
@@ -277,7 +277,7 @@ public class TrainingController {
 					+ " <br/> Note that your  exam starting time will be your corresponding local time of the Kuwait time (GMT+3) mentioned. above";
 			mailStr = mailStr + " <br/> <b>Exam portal login credentials:</b>";
 			mailStr = mailStr
-					+ " <br/> Exam Portal link:  https://academy.path-solutions.com/pathTDS/applicantLogin";
+					+ " <br/> Exam Portal link:  https://academy.path-solutions.com/pathTDS:9095/applicantLogin";
 			mailStr = mailStr + " <br/> User Name: " + applicantRegisterModel.getEmailId();
 			mailStr = mailStr + " <br/> Password: " + applicantRegisterModel.getApplicantPassword();
 			mailStr = mailStr + " <br/> Exam ID: " + applicantRegisterModel.getExamId();
@@ -345,7 +345,7 @@ public class TrainingController {
 								+ " <br/> Note that your  exam starting time will be your corresponding local time of the Kuwait time (GMT+3) mentioned. above";
 						mailStr = mailStr + " <br/> <b>Exam portal login credentials:</b>";
 						mailStr = mailStr
-								+ " <br/> Exam Portal link:  https://academy.path-solutions.com/pathTDS/applicantLogin";
+								+ " <br/> Exam Portal link:  https://academy.path-solutions.com:9095/pathTDS/applicantLogin";
 						mailStr = mailStr + " <br/> User Name: " + appRegM.getEmailId();
 						mailStr = mailStr + " <br/> Password: " + appRegM.getApplicantPassword();
 						mailStr = mailStr + " <br/> Exam ID: " + appRegM.getExamId();
