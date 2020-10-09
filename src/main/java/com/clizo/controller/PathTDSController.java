@@ -1565,9 +1565,8 @@ public class PathTDSController {
            session=sf.openSession();
            String val;
            if (!StringUtils.isEmpty(questionPaperNumber1)){
-        	   //StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generatePrevQn");
-        	   StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generatePrevQn");
-//        	   StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_generatePrevQn");
+//        	   StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generatePrevQn");
+        	   StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_generatePrevQn");
         	   procedureQuery.registerStoredProcedureParameter("prevQn", Integer.class, ParameterMode.IN);
         	   procedureQuery.registerStoredProcedureParameter("generatedQnId", String.class, ParameterMode.OUT);        	   
         	   procedureQuery.setParameter("prevQn",Integer.parseInt(questionPaperNumber1));
@@ -1575,9 +1574,8 @@ public class PathTDSController {
        	       val= (String)procedureQuery.getOutputParameterValue("generatedQnId");
              
            }else{
-    	   //StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generateQnPaper");
-           StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generateQnPaper");
-//           StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_generateQnPaper");
+//           StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_generateQnPaper");
+           StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_generateQnPaper");
     	   procedureQuery.registerStoredProcedureParameter("classname1", String.class, ParameterMode.IN);
     	   procedureQuery.registerStoredProcedureParameter("Total_time_allowed1", String.class, ParameterMode.IN);
     	   procedureQuery.registerStoredProcedureParameter("No_of_question_for_evaluation1", int.class, ParameterMode.IN);

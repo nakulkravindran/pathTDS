@@ -1212,8 +1212,8 @@ public class QustnBankController {
 	    		List<ReportExam> rptexam;
 	            try (Session session = sf.openSession()) {
 	            String val;
-	             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_examreport");
-//	             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_examreport");	             		   		
+//	             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_examreport");
+	             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_examreport");	             		   		
 	             procedureQuery.execute();
 	              
 	              List<Object[]> res = procedureQuery.getResultList();
@@ -1329,8 +1329,8 @@ public class QustnBankController {
 		    		List<ReportTraining> rpttraining;
 		            try (Session session = sf.openSession()) {
 		            String val;
-		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_trainingreport");
-//		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_trainingreport");	             		   		
+//		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_trainingreport");
+		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_trainingreport");	             		   		
 		             procedureQuery.execute();
 		              
 		              List<Object[]> res = procedureQuery.getResultList();
@@ -1416,8 +1416,8 @@ public class QustnBankController {
 		    		
 		            try (Session session = sf.openSession()) {
 		            String val;
-		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_monitorreport");
-//		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_monitorreport");	             		   		
+//		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("tds_prod.sp_monitorreport");
+		             StoredProcedureQuery procedureQuery=session.createStoredProcedureQuery("testtds.sp_monitorreport");	             		   		
 		             procedureQuery.execute();
 		              
 		              List<Object[]> res = procedureQuery.getResultList();
