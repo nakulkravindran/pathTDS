@@ -3,6 +3,7 @@ package com.clizo.mail;
 
 import java.util.Date;
 
+import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -26,8 +27,10 @@ public class EmailUtil {
 	      msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
 	      msg.addHeader("format", "flowed");
 	      msg.addHeader("Content-Transfer-Encoding", "8bit");
-	      msg.setFrom(new InternetAddress(frmEmail, frmEmail));
-	      msg.setReplyTo(InternetAddress.parse(frmEmail, false));
+	      msg.setFrom(new InternetAddress(frmEmail));
+	      Address[] add = new Address[1];
+	      add[0] = new InternetAddress(frmEmail);
+	      msg.setReplyTo(add);
 	      msg.setSubject(subject, "UTF-8");	      
 	      msg.setContent(body, "text/html; charset=utf-8");
 	      msg.setSentDate(new Date());

@@ -148,6 +148,7 @@ public class TrainingController {
 			System.out.println("String get :" + cvs);
 			Properties props = new Properties();
 
+			cvs = null;
 			if (cvs != null) {
 				try {
 					prop.load(cvs);
@@ -170,18 +171,34 @@ public class TrainingController {
 				System.out.println("TDSEmail Start  > Default Config");
 				props.put("mail.smtp.host", "mailrelay.path.local"); // SMTP Host
 				props.put("mail.smtp.port", "25"); // TLS Port
-				props.put("mail.smtp.auth", "true"); // enable authentication
-				props.put("mail.smtp.starttls.enable", "false"); // enable STARTTLS
+				props.put("mail.smtp.auth", "false"); // enable authentication
+				props.put("mail.smtp.starttls.enable", "true"); // enable STARTTLS
 
 			}
 			// create Authenticator object to pass in Session.getInstance argument
 			Authenticator auth = new Authenticator() {
 				// override the getPasswordAuthentication method
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication(fromEmail, password);
+					try {
+						return new PasswordAuthentication(fromEmail, password);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					return null;
 				}
 			};
-			Session session = Session.getInstance(props, auth);
+			Boolean authRequired = false;
+			Session session = null;
+			if(authRequired)
+			{
+				session = Session.getInstance(props, auth);
+			}
+			else
+			{
+				session = Session.getInstance(props);
+				session.setDebug(false);
+			}
 			return session;
 		} catch (Exception e) {
 			e.printStackTrace();
